@@ -1,0 +1,40 @@
+/* ===== Shared by Android, iOS, Linux and Windows pages =====
+   Card, banner and grid styles come from style.css and pc-mobile.css */
+
+/* ----- Banner extras ----- */
+.sub-banner { padding: 2rem 0 2.5rem; }
+.sub-banner .breadcrumb { font-size: 0.85rem; --bs-breadcrumb-divider-color: rgba(255,255,255,.6); }
+.sub-banner .breadcrumb a { color: #fff; text-decoration: none; }
+.sub-banner .breadcrumb-item.active { color: rgba(255,255,255,.7); }
+.banner-icon { font-size: 3rem; }
+
+/* ----- Sidebar ----- */
+.sidebar { position: sticky; top: 20px; }
+
+.widget-title {
+  font-size: 1rem;
+  font-weight: 700;
+  border-left: 4px solid var(--blue);
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .trend h4 { font-size: 0.9rem; font-weight: 600; margin: 0 0 2px; }
+.subscribe { background: #e8f0ff; }
+
+/* Topic chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips a {
+  background: #e8f0ff;
+  color: var(--blue);
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.chips a:hover { background: var(--blue); color: #fff; }
+
+/* Pagination (same look as the News page) */
+.pagination { gap: 6px; }
+.page-link { color: var(--dark); border: 1px solid var(--border); border-radius: 8px !important; }
+.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: rgb(5, 97, 5); }

@@ -1,0 +1,88 @@
+/* ===== PC & Mobile page only =====
+   Shared styles (header, navbar, footer, .box, .thumb, gradients) live in style.css */
+
+/* ----- Blue category banner ----- */
+.cat-banner {
+  background: linear-gradient(135deg, #1d4ed8, #0f172a);
+  color: #fff;
+  padding: 3rem 0;
+}
+.cat-banner h1 { font-size: 2.4rem; }
+.cat-banner p { color: #dbe6ff; max-width: 480px; }
+
+.os-tile {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 0.5rem;
+}
+.os-tile i { display: block; font-size: 1.8rem; margin-bottom: 0.3rem; }
+
+/* ----- Filter pills ----- */
+.filter .nav-link {
+  color: var(--dark);
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  padding: 0.4rem 1.1rem;
+}
+.filter .nav-link.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* ----- Featured cards (text sits on top of the image) ----- */
+.feature {
+  position: relative;
+  border-radius: 14px;
+  padding: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  background-size: cover;
+}
+/* dark fade so the text is easy to read */
+.feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 20, 45, 0.85), rgba(10, 20, 45, 0.05));
+}
+.feature > div { position: relative; }   /* keep text above the fade */
+.feature h2 { font-size: 1.5rem; font-weight: 700; }
+.feature h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+
+.feature.big     { min-height: 380px; }
+.feature.small-f { flex: 1; min-height: 178px; }
+
+/* ----- Article grid cards ----- */
+.card-item { display: flex; flex-direction: column; }
+.card-item .thumb { height: 160px; margin-bottom: 1rem; }
+
+.card-item .tag {
+  align-self: flex-start;
+  background: #e8f0ff;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+}
+.card-item h3 { font-size: 1rem; font-weight: 600; }
+.card-item p { font-size: 0.85rem; color: #64748b; }
+
+.card-item .foot {
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+.card-item .foot a { color: var(--blue); text-decoration: none; font-weight: 500; }
+
+/* ----- Small screens ----- */
+@media (max-width: 767px) {
+  .cat-banner h1 { font-size: 1.8rem; }
+  .feature.big { min-height: 260px; }
+  .feature h2 { font-size: 1.2rem; }
+}

@@ -1,0 +1,50 @@
+/* ===== News & Updates page only =====
+   Shared styles (header, navbar, footer, .box, .thumb, .trend) live in style.css */
+
+/* ----- Page title + breadcrumb ----- */
+.page-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+.breadcrumb { font-size: 0.85rem; }
+.breadcrumb a { color: var(--blue); text-decoration: none; }
+
+/* ----- Post cards (image left, text right) ----- */
+.post .thumb { height: 100%; min-height: 150px; }
+
+.post h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem; }
+.post h2 a { color: var(--dark); text-decoration: none; }
+.post h2 a:hover { color: var(--blue); }
+
+.post .meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.75rem; color: #64748b; margin-bottom: 0.6rem; }
+.post p { font-size: 0.9rem; color: #64748b; margin: 0; }
+
+/* ----- Pagination ----- */
+.pagination { gap: 6px; }
+.page-link {
+  color: var(--dark);
+  border: 1px solid var(--border);
+  border-radius: 8px !important;
+}
+.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: rgba(241, 144, 32, 0.733); }
+
+/* ----- Sidebar ----- */
+.sidebar { position: sticky; top: 20px; }
+
+.widget-title {
+  font-size: 1rem;
+  font-weight: 700;
+  border-left: 4px solid var(--blue);
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .trend h4 { font-size: 0.85rem; font-weight: 600; margin: 0 0 4px; }
+
+.subscribe { background: #e8f0ff; }
+
+/* ----- Small screens: stack image above text ----- */
+@media (max-width: 767px) {
+  .post .thumb { min-height: 160px; }
+}
