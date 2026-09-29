@@ -1,0 +1,221 @@
+
+Style · CSS
+/* ===== Basics ===== */
+:root {
+  --blue: #2563eb;
+  --dark: #0f172a;
+  --page-bg: #f5f8ff;
+  --border: #e5eaf5;
+}
+ 
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--page-bg);
+  color: var(--dark);
+}
+ 
+a { color: inherit; }
+ 
+/* Make Bootstrap's primary colour match the design */
+.btn-primary, .badge.bg-primary { background-color: var(--blue) !important; border-color: var(--blue); }
+.text-primary { color: var(--blue) !important; }
+ 
+/* ===== Header ===== */
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+}
+ 
+.search-box { position: relative; max-width: 500px; }
+.search-box .form-control { border-radius: 10px; padding-right: 40px; background: #f8faff; }
+.search-box i { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #64748b; }
+ 
+/* ===== Navbar ===== */
+.navbar .nav-link { font-size: 0.9rem; color: var(--dark); padding: 0.55rem 1rem; }
+.navbar .nav-link.active {
+  background: var(--blue);
+  color: #7fa8f3;
+  border-radius: 8px;
+}
+ 
+/* ===== White boxes (used for cards, trending, categories) ===== */
+.box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(30, 60, 120, 0.06);
+}
+ 
+/* Blue bar next to section titles */
+.section-title { border-left: 4px solid var(--blue); padding-left: 0.75rem; }
+ 
+/* ===== Image placeholders =====
+   Replace each background with your own image, for example:
+   .bg-phone { background: url("images/iphone.jpg") center/cover; }  */
+.thumb {
+  position: relative;
+  height: 100px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.thumb .badge { position: absolute; left: 8px; bottom: 8px; font-weight: 500; }
+.thumb-sm { width: 82px; height: 58px; flex-shrink: 0; }
+ 
+.bg-ai      { background: linear-gradient(135deg, #0b1e5b, #2563eb); }
+.bg-windows { background: linear-gradient(135deg, #0a3d91, #1da1f2); }
+.bg-code    { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+.bg-robot   { background: linear-gradient(135deg, #0f172a, #3b82f6); }
+.bg-js      { background: linear-gradient(135deg, #1e293b, #f7c948); }
+.bg-phone   { background: linear-gradient(135deg, #7c3aed, #3b82f6); }
+.bg-android { background: linear-gradient(135deg, #94a3b8, #2563eb); }
+.bg-brain   { background: linear-gradient(135deg, #0f172a, #7c3aed); }
+.bg-tips    { background: linear-gradient(135deg, #fcd34d, #64748b); }
+ 
+/* ===== Hero ===== */
+.hero {
+  min-height: 350px;
+  border-radius: 14px;
+  padding: 2rem;
+  color: #fff;
+  background:
+    linear-gradient(to top, rgba(10, 20, 45, 0.9), rgba(10, 20, 45, 0.15)),
+    linear-gradient(135deg, #1d4ed8, #0f172a);
+  /* Replace with: url("images/laptop.jpg") center/cover */
+}
+.hero-text { max-width: 560px; }
+.hero-text p { color: #e2e8f0; }
+ 
+/* ===== Trending ===== */
+.trend { padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
+.trend h3 { font-size: 0.85rem; font-weight: 600; margin: 2px 0; }
+.trend small { font-size: 0.72rem; }
+.num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.7rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+ 
+/* ===== Article cards ===== */
+.article .thumb { height: 100px; margin-bottom: 0.9rem; }
+.article h3 { font-size: 1rem; font-weight: 600; }
+.article p { font-size: 0.85rem; color: #64748b; }
+.article .meta { display: flex; gap: 1.2rem; font-size: 0.72rem; color: #64748b; margin-top: auto; }
+ 
+/* ===== Categories ===== */
+.category {
+  display: block;
+  height: 100%;
+  background-color: rgba(226, 228, 231, 0.541);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+.category:hover { box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15); }
+.category strong { display: block; font-size: 0.9rem; }
+.category small { color: #64748b; }
+.cat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e8f0ff;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+ 
+/* ===== Newsletter ===== */
+.newsletter { background: #e8f0ff; }
+ 
+/* ===== Footer ===== */
+.footer { background: #0b1437; }
+.footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
+.footer a:hover { color: #fff; }
+.footer li { margin-bottom: 0.5rem; }
+ 
+/* ===== Back to top button ===== */
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+ 
+/* =====================================================
+   DARK MODE  (switched by the moon button in the header)
+   include.js sets data-bs-theme="dark" on <html>
+   ===================================================== */
+[data-bs-theme="dark"] {
+  --page-bg: #0b1120;
+  --border: #243049;
+  --dark: #e5e9f5;          /* "dark" text colour becomes light */
+}
+ 
+/* White surfaces become dark blue */
+[data-bs-theme="dark"] .box,
+[data-bs-theme="dark"] .category,
+[data-bs-theme="dark"] .topic,
+[data-bs-theme="dark"] .page-header,
+[data-bs-theme="dark"] .filter .nav-link,
+[data-bs-theme="dark"] .ai-tabs .nav-link,
+[data-bs-theme="dark"] .page-link,
+[data-bs-theme="dark"] .search-box .form-control {
+  background: #131c31;
+}
+[data-bs-theme="dark"] .bg-white { background-color: #131c31 !important; }
+ 
+/* Light-blue areas become deep blue */
+[data-bs-theme="dark"] .newsletter,
+[data-bs-theme="dark"] .subscribe,
+[data-bs-theme="dark"] .cat-icon,
+[data-bs-theme="dark"] .icon-round,
+[data-bs-theme="dark"] .tag,
+[data-bs-theme="dark"] .chips a {
+  background: #1a2745;
+}
+[data-bs-theme="dark"] .prod-hero { background: linear-gradient(180deg, #14213d, var(--page-bg)); }
+ 
+/* Small fixes */
+[data-bs-theme="dark"] .navbar-toggler-icon { filter: invert(1); }
+[data-bs-theme="dark"] .t-item::before { border-color: var(--page-bg); }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

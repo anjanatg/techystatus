@@ -1,0 +1,91 @@
+/* ===== Productivity page only =====
+   Shared styles (header, navbar, footer, .box, .thumb, gradients) live in style.css */
+
+/* ----- Centered hero with search ----- */
+.prod-hero {
+  background: linear-gradient(180deg, #e8f0ff, var(--page-bg));
+  padding: 3.5rem 0 2.5rem;
+  text-align: center;
+}
+.prod-hero h1 { font-size: 2.4rem; font-weight: 700; }
+.prod-hero p { color: #64748b; max-width: 520px; margin: 0.6rem auto 1.5rem; }
+
+.prod-search { max-width: 480px; margin: 0 auto; position: relative; }
+.prod-search .form-control { border-radius: 30px; padding: 0.75rem 3rem 0.75rem 1.25rem; }
+.prod-search .btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  width: 40px;
+  padding: 0;
+}
+
+/* ----- Topic tiles ----- */
+.topic {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(30, 60, 120, 0.06);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.topic:hover { transform: translateY(-3px); }
+.topic strong { display: block; font-size: 0.95rem; }
+.topic small { color: #64748b; }
+
+.icon-round {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #e8f0ff;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+/* ----- Featured (image left, text right) ----- */
+.spotlight { padding: 0; overflow: hidden; }
+.spotlight .thumb { height: 100%; min-height: 260px; border-radius: 0; }
+.spotlight .body { padding: 2rem; }
+.spotlight h2 { font-size: 1.6rem; font-weight: 700; }
+.spotlight p { color: #64748b; }
+
+/* ----- Quick tips (icon cards) ----- */
+.tip { display: block; height: 100%; text-decoration: none; transition: transform 0.2s; }
+.tip:hover { transform: translateY(-3px); }
+.tip .icon-round { margin-bottom: 0.9rem; }
+.tip h3 { font-size: 1rem; font-weight: 600; color: var(--dark); }
+.tip small { color: #64748b; }
+
+/* ----- Tool of the week (dark full-width band) ----- */
+.tool-band { background: #0b1437; color: #fff; padding: 3rem 0; }
+.tool-band p { color: #cbd5e1; }
+.tool-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.tool-card i { font-size: 2.5rem; color: #7aa2ff; }
+
+/* ----- Compact article list ----- */
+.mini { display: flex; gap: 1rem; align-items: center; }
+.mini .thumb { width: 110px; height: 80px; flex-shrink: 0; }
+.mini h3 { font-size: 0.95rem; font-weight: 600; margin: 0 0 4px; }
+.mini h3 a { color: var(--dark); text-decoration: none; }
+.mini h3 a:hover { color: var(--blue); }
+.mini small { color: #64748b; }
+
+@media (max-width: 767px) {
+  .prod-hero h1 { font-size: 1.8rem; }
+  .spotlight .thumb { min-height: 180px; }
+  .spotlight .body { padding: 1.25rem; }
+}
