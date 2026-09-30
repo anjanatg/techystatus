@@ -1,12 +1,12 @@
 <!-- ========== FOOTER ========== -->
-  <footer class="container-fluid footer text-white pt-5 pb-3">
-    <div class="container">
+  <footer class="container-fluid footer text-white  pb-3">
+    <div class="container-fluid">
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="d-flex align-items-center gap-2 mb-3">
             <span class="logo-icon"><i class="bi bi-lightning-charge-fill"></i></span>
             <span>
-              <strong class="d-block fs-5 lh-1">TechNova</strong>
+              <strong class="d-block fs-5 lh-1">TechyStatus</strong>
               <small class="text-white-50">Tech News • Guides • Reviews</small>
             </span>
           </div>
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <hr class="border-secondary my-4">
+      <hr class="footer-hr border-secondary my-4">
 
       <div class="d-flex flex-column flex-md-row justify-content-between small text-white-50">
         <span>© 2025 TechNova. All rights reserved.</span>

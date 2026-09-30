@@ -11,7 +11,7 @@
 .breadcrumb a { color: var(--blue); text-decoration: none; }
 
 /* ----- Post cards (image left, text right) ----- */
-.post .thumb { height: 100%; min-height: 150px; }
+.post .thumb { height: 100%; min-height: 170px; overflow: hidden; }   /* the <img> fills the box */
 
 .post h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem; }
 .post h2 a { color: var(--dark); text-decoration: none; }
@@ -27,7 +27,7 @@
   border: 1px solid var(--border);
   border-radius: 8px !important;
 }
-.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: rgba(241, 144, 32, 0.733); }
+.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: #fff; }
 
 /* ----- Sidebar ----- */
 .sidebar { position: sticky; top: 20px; }
@@ -40,11 +40,13 @@
   margin-bottom: 1rem;
 }
 
+.sidebar .trend { align-items: center; }
 .sidebar .trend h4 { font-size: 0.85rem; font-weight: 600; margin: 0 0 4px; }
+.sidebar .trend-img { width: 88px; height: 64px; }    /* smaller than the home page Trending images */
 
 .subscribe { background: #e8f0ff; }
 
 /* ----- Small screens: stack image above text ----- */
 @media (max-width: 767px) {
-  .post .thumb { min-height: 160px; }
+  .post .thumb { min-height: 200px; }
 }
