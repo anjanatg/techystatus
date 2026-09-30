@@ -1,2 +1,12 @@
-/* ===== Linux page only: banner colour ===== */
+/* ===== Linux page only =====
+   Card, sidebar and pagination styles come from style.css, index.css and subcategory.css */
+
+/* ----- Banner colour ----- */
 .linux-banner { background: linear-gradient(135deg, #d97706, #451a03); }
+
+/* ----- Article images (the <img> fills the box) ----- */
+.card-item .thumb { height: 190px; overflow: hidden; }
+
+/* ----- Small pictures in the sidebar ----- */
+.sidebar .trend { align-items: center; }
+.sidebar .trend-img { width: 88px; height: 64px; }

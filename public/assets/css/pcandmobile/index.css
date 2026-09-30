@@ -1,4 +1,4 @@
-/* ===== PC & Mobile page only =====
+/* ===== PC & Mobile page (also used by Android, iOS, Linux and Windows) =====
    Shared styles (header, navbar, footer, .box, .thumb, gradients) live in style.css */
 
 /* ----- Blue category banner ----- */
@@ -10,12 +10,18 @@
 .cat-banner h1 { font-size: 2.4rem; }
 .cat-banner p { color: #dbe6ff; max-width: 480px; }
 
+/* OS tiles in the banner (they are links) */
 .os-tile {
+  display: block;
+  color: #fff;
+  text-decoration: none;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 1rem 0.5rem;
+  transition: background 0.2s;
 }
+.os-tile:hover { background: rgba(255, 255, 255, 0.25); color: #fff; }
 .os-tile i { display: block; font-size: 1.8rem; margin-bottom: 0.3rem; }
 
 /* ----- Filter pills ----- */
@@ -28,7 +34,7 @@
 }
 .filter .nav-link.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 
-/* ----- Featured cards (text sits on top of the image) ----- */
+/* ----- Featured cards (text sits on top of the photo) ----- */
 .feature {
   position: relative;
   border-radius: 14px;
@@ -36,16 +42,19 @@
   color: #fff;
   text-decoration: none;
   overflow: hidden;
-  background-size: cover;
+  background: #0a1a4a;
 }
-/* dark fade so the text is easy to read */
+/* layers: photo (0) -> dark fade (1) -> text (2) */
+.feature-img { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.feature:hover .feature-img { transform: scale(1.05); }
 .feature::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(to top, rgba(10, 20, 45, 0.85), rgba(10, 20, 45, 0.05));
 }
-.feature > div { position: relative; }   /* keep text above the fade */
+.feature > div { position: relative; z-index: 2; }
 .feature h2 { font-size: 1.5rem; font-weight: 700; }
 .feature h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
 
@@ -54,7 +63,7 @@
 
 /* ----- Article grid cards ----- */
 .card-item { display: flex; flex-direction: column; }
-.card-item .thumb { height: 160px; margin-bottom: 1rem; }
+.card-item .thumb { height: 190px; margin-bottom: 1rem; overflow: hidden; }   /* the <img> fills the box */
 
 .card-item .tag {
   align-self: flex-start;

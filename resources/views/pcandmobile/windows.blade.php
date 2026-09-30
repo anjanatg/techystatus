@@ -3,20 +3,20 @@
 @section('title', "Windows - TechNova")
 
 @push('styles')
-  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/pcandmobile/index.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/pcandmobile/subcategory.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/pcandmobile/windows.css') }}" rel="stylesheet">
 @endpush
 
 @section('content')
+
 <!-- ========== BANNER + BREADCRUMB ========== -->
 <section class="container-fluid cat-banner sub-banner windows-banner">
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-3">
-        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html">PC &amp; Mobile</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('pcandmobile.index') }}">PC &amp; Mobile</a></li>
         <li class="breadcrumb-item active" aria-current="page">Windows</li>
       </ol>
     </nav>
@@ -43,56 +43,56 @@
       <div class="row g-4">
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-windows"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-cottonbro-6804613.jpg') }}" alt="Windows features" loading="lazy"></div>
             <span class="tag">Tips</span>
             <h3>10 Hidden Windows Features You Should Be Using</h3>
             <p>Handy tools that are already on your PC.</p>
-            <div class="foot"><span>Sep 26, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>2 hours ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-ai"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-altman-12883029.jpg') }}" alt="Windows update" loading="lazy"></div>
             <span class="tag">Update</span>
             <h3>Windows Gets a Major Update With New Productivity Features</h3>
             <p>Improved search, snap layouts and system security.</p>
-            <div class="foot"><span>Sep 24, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>Yesterday</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-code"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-alicia-christin-gerald-1447380217-37880101.jpg') }}" alt="Slow PC" loading="lazy"></div>
             <span class="tag">Fix</span>
             <h3>How to Speed Up a Slow Windows PC in 10 Minutes</h3>
             <p>Simple settings changes that make an old computer feel faster.</p>
-            <div class="foot"><span>Sep 22, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>2 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-brain"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-mikhail-nilov-6930895.jpg') }}" alt="Student laptop" loading="lazy"></div>
             <span class="tag">Review</span>
             <h3>Best Laptops for Students Under ₹50,000</h3>
             <p>Good performance and battery life without spending too much.</p>
-            <div class="foot"><span>Sep 20, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>3 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-android"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-andrew-15863044.jpg') }}" alt="Reinstall Windows" loading="lazy"></div>
             <span class="tag">Guide</span>
             <h3>How to Reinstall Windows Without Losing Your Files</h3>
             <p>A clear guide for a clean, safe reinstall.</p>
-            <div class="foot"><span>Sep 18, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>4 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-tips"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-magda-ehlers-pexels-35280155.jpg') }}" alt="Windows security" loading="lazy"></div>
             <span class="tag">Security</span>
             <h3>7 Windows Security Settings to Check Today</h3>
             <p>Keep your PC safe from common threats.</p>
-            <div class="foot"><span>Sep 16, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>5 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
       </div>
@@ -119,14 +119,17 @@
           <h3 class="widget-title">Top Windows Picks</h3>
           <div class="trend d-flex gap-3">
             <span class="num">1</span>
+            <div class="trend-img"><img src="{{ asset('assets/images/pexels-altman-12883029.jpg') }}" alt="Windows 11" loading="lazy"></div>
             <div><h4>Windows 11 24H2</h4><small class="text-muted">Latest stable release</small></div>
           </div>
           <div class="trend d-flex gap-3">
             <span class="num">2</span>
+            <div class="trend-img"><img src="{{ asset('assets/images/pexels-cottonbro-6804613.jpg') }}" alt="PowerToys" loading="lazy"></div>
             <div><h4>PowerToys</h4><small class="text-muted">Best free utility pack</small></div>
           </div>
           <div class="trend d-flex gap-3 border-0 pb-0 mb-0">
             <span class="num">3</span>
+            <div class="trend-img"><img src="{{ asset('assets/images/pexels-alicia-christin-gerald-1447380217-37880101.jpg') }}" alt="Windows Terminal" loading="lazy"></div>
             <div><h4>Windows Terminal</h4><small class="text-muted">Best for power users</small></div>
           </div>
         </div>
@@ -134,8 +137,9 @@
         <div class="box subscribe">
           <h3 class="widget-title">Windows Updates</h3>
           <p class="small text-muted">Get new Windows articles in your inbox.</p>
-          <form>
-            <input type="email" class="form-control mb-2" placeholder="Enter your email address">
+          <form action="" method="POST">
+            @csrf
+            <input type="email" name="email" class="form-control mb-2" placeholder="Enter your email address" required>
             <button type="submit" class="btn btn-primary w-100">Subscribe</button>
           </form>
         </div>

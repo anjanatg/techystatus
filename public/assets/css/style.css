@@ -1,5 +1,3 @@
-
-Style · CSS
 /* ===== Basics ===== */
 :root {
   --blue: #2563eb;
@@ -7,20 +5,20 @@ Style · CSS
   --page-bg: #f5f8ff;
   --border: #e5eaf5;
 }
- 
+
 body {
   font-family: "Inter", sans-serif;
   background: var(--page-bg);
   color: var(--dark);
 }
- 
+
 a { color: inherit; }
- 
+
 /* Make Bootstrap's primary colour match the design */
 .btn-primary, .badge.bg-primary { background-color: var(--blue) !important; border-color: var(--blue); }
 .text-primary { color: var(--blue) !important; }
- 
-/* ===== Header ===== */
+
+/* ===== Logo (used in header and footer) ===== */
 .logo-icon {
   width: 42px;
   height: 42px;
@@ -31,33 +29,77 @@ a { color: inherit; }
   place-items: center;
   font-size: 1.4rem;
 }
- 
+
+/* ===== Search box ===== */
 .search-box { position: relative; max-width: 500px; }
 .search-box .form-control { border-radius: 10px; padding-right: 40px; background: #f8faff; }
 .search-box i { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #64748b; }
- 
-/* ===== Navbar ===== */
+
+/* ===== Navbar (old style, still used by other pages) ===== */
 .navbar .nav-link { font-size: 0.9rem; color: var(--dark); padding: 0.55rem 1rem; }
 .navbar .nav-link.active {
   background: var(--blue);
   color: #7fa8f3;
   border-radius: 8px;
 }
- 
+
+/* =====================================================
+   DARK HEADER AND MENU  (always dark, like the design)
+   The header and menu wrappers have data-bs-theme="dark"
+   ===================================================== */
+.site-header { background: linear-gradient(90deg, #050c26, #0a1a4a); border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+.site-nav    { background: #07123a; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+
+.brand { font-size: 1.6rem; font-weight: 700; color: #fff; }
+.brand span { color: #3b82f6; }
+.tagline { color: #cbd5f5; }
+
+.site-header .search-box { max-width: 560px; }
+.site-header .search-box input.form-control {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #2f5bd8;
+  border-radius: 999px;
+  color: #fff;
+  padding: 0.7rem 3rem 0.7rem 1.4rem;
+}
+.site-header .search-box input.form-control::placeholder { color: #cbd5f5; }
+.site-header .search-box i { color: #fff; }
+
+/* Round social buttons and the moon button */
+.social-btn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: background 0.2s;
+}
+.social-btn:hover { background: var(--blue); color: #fff; }
+
+.site-nav .navbar-nav .nav-link { color: #e5e9f5; padding: 0.5rem 1.1rem; }
+.site-nav .navbar-nav .nav-link:hover { color: #fff; }
+.site-nav .navbar-nav .nav-link.active {
+  background: linear-gradient(90deg, #5b4bf5, #3b6df0);
+  color: #fff;
+  border-radius: 999px;
+}
+.site-nav .navbar-toggler { border-color: rgba(255, 255, 255, 0.3); }
+
 /* ===== White boxes (used for cards, trending, categories) ===== */
 .box {
-  background: #fff;
-  border-radius: 14px;
+  background: #fcfafa;
+  border-radius: 1px;
   padding: 1.25rem;
   box-shadow: 0 2px 10px rgba(30, 60, 120, 0.06);
 }
- 
+
 /* Blue bar next to section titles */
 .section-title { border-left: 4px solid var(--blue); padding-left: 0.75rem; }
- 
+
 /* ===== Image placeholders =====
-   Replace each background with your own image, for example:
-   .bg-phone { background: url("images/iphone.jpg") center/cover; }  */
+   Gradients are used when a page has no photo yet. */
 .thumb {
   position: relative;
   height: 100px;
@@ -67,7 +109,8 @@ a { color: inherit; }
 }
 .thumb .badge { position: absolute; left: 8px; bottom: 8px; font-weight: 500; }
 .thumb-sm { width: 82px; height: 58px; flex-shrink: 0; }
- 
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 .bg-ai      { background: linear-gradient(135deg, #0b1e5b, #2563eb); }
 .bg-windows { background: linear-gradient(135deg, #0a3d91, #1da1f2); }
 .bg-code    { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
@@ -77,23 +120,46 @@ a { color: inherit; }
 .bg-android { background: linear-gradient(135deg, #94a3b8, #2563eb); }
 .bg-brain   { background: linear-gradient(135deg, #0f172a, #7c3aed); }
 .bg-tips    { background: linear-gradient(135deg, #fcd34d, #64748b); }
- 
+
+/* ===== Header icons (older style, kept for other uses) ===== */
+.header-icon { color: #475569; transition: color 0.2s, transform 0.2s; }
+.header-icon:hover { color: var(--blue); transform: translateY(-2px); }
+
 /* ===== Hero ===== */
 .hero {
-  min-height: 350px;
+  position: relative;
+  min-height: 450px;
   border-radius: 14px;
-  padding: 2rem;
+  padding: 2.5rem;
   color: #fff;
-  background:
-    linear-gradient(to top, rgba(10, 20, 45, 0.9), rgba(10, 20, 45, 0.15)),
-    linear-gradient(135deg, #1d4ed8, #0f172a);
-  /* Replace with: url("images/laptop.jpg") center/cover */
+  overflow: hidden;
+  background: #0a1a4a center / cover no-repeat;      /* the image is set in the Blade file */
 }
-.hero-text { max-width: 560px; }
-.hero-text p { color: #e2e8f0; }
- 
-/* ===== Trending ===== */
-.trend { padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: 1px solid var(--border); }
+/* dark on the left for the text, the photo stays clear on the right */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 12, 35, 0.95) 0%, rgba(5, 12, 35, 0.6) 45%, transparent 78%);
+}
+.hero-text { position: relative; max-width: 560px; }
+.hero-text h1 { font-size: 2.3rem; line-height: 1.2; margin: 1rem 0; }
+.hero-text p { color: #dbe4f5; }
+.hero .hl { color: #3b82f6; text-decoration: none; }
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5b4bf5, #3b6df0);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ===== Trending =====
+   The old .trend rules below are still used by the sidebars on other pages.
+   The new dark look is scoped to .trend-box, so those pages are not affected. */
+.trend { padding-bottom: 0.9rem; margin-bottom: 0.9rem; border-bottom: 1px solid var(--border); background-color: white; border-radius: 10px; padding-top: 12px; }
 .trend h3 { font-size: 0.85rem; font-weight: 600; margin: 2px 0; }
 .trend small { font-size: 0.72rem; }
 .num {
@@ -108,24 +174,252 @@ a { color: inherit; }
   flex-shrink: 0;
   margin-top: 2px;
 }
- 
-/* ===== Article cards ===== */
-.article .thumb { height: 100px; margin-bottom: 0.9rem; }
-.article h3 { font-size: 1rem; font-weight: 600; }
-.article p { font-size: 0.85rem; color: #64748b; }
-.article .meta { display: flex; gap: 1.2rem; font-size: 0.72rem; color: #64748b; margin-top: auto; }
- 
+
+/* Home page Trending box (dark) */
+.trend-box { background: #0a1330; color: #fff; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 1.25rem; }
+.trend-box .text-primary { color: #4f8bff !important; }
+
+.trend-box .trend {
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(90, 120, 255, 0.25);
+  border-radius: 10px;
+  color: #fff;
+  transition: background 0.2s;
+}
+.trend-box .trend:hover { background: rgba(255, 255, 255, 0.08); }
+.trend-box .trend h3 { font-size: 0.9rem; font-weight: 600; margin: 6px 0; color: #fff; }
+.trend-box .trend small { font-size: 0.72rem; color: #9fb0d0; }
+.trend-arrow { margin-left: auto; color: #7aa2ff; font-size: 1.1rem; }
+
+.trend-img { width: 130px; height: 95px; flex-shrink: 0; border-radius: 6px; overflow: hidden; }
+.trend-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.cat-pill { display: inline-block; padding: 1px 10px; border-radius: 999px; font-size: 0.72rem; color: #fff; }
+.cat-ai   { background: #5b3fd8; }
+.cat-tips { background: #0f9d75; }
+.cat-dev  { background: #e8590c; }
+.cat-prog { background: #2563eb; }
+
+/* =====================================================
+   LATEST ARTICLES  (dark cards on a light-blue background)
+   ===================================================== */
+.latest-section {
+  background: #eef4ff;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* Heading */
+.latest-title {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.2rem;
+}
+.latest-dash {
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--blue);
+}
+.grad-text {
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.latest-sub { color: #64748b; }
+.latest-viewall {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.latest-viewall:hover { text-decoration: underline; }
+
+/* Card */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #0a1330;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(10, 19, 48, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(10, 19, 48, 0.35);
+  color: #fff;
+}
+
+/* Image with fade into the dark card */
+.article-thumb { position: relative; height: 190px; }
+.article-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.article-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, #0a1330 100%);
+}
+
+/* Category pill sits on the bottom-left of the image */
+.article-badge {
+  position: absolute;
+  left: 20px;
+  bottom: 6px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+.badge-news { background: linear-gradient(90deg, #5b4bf5, #3b6df0); }
+.badge-pc   { background: linear-gradient(90deg, #6d4df2, #3b6df0); }
+.badge-ai   { background: linear-gradient(90deg, #0d9488, #14b8a6); }
+.badge-prod { background: linear-gradient(90deg, #f97316, #fb923c); }
+.badge-dev  { background: linear-gradient(90deg, #7c3aed, #6d4df2); }
+.badge-prog { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+
+/* Text */
+.article-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.6rem 20px 1.1rem;
+}
+.article-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+.article-card p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0 0 1rem;
+}
+
+/* Author, date and arrow */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  font-size: 0.78rem;
+  color: #e5e9f5;
+}
+.article-meta .avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.article-meta .bi-calendar3 { color: #9fb0d0; margin-right: 2px; }
+.article-arrow { margin-left: auto; color: #3b82f6; font-size: 1.1rem; }
+
+/* =====================================================
+   POPULAR CATEGORIES  (6 soft cards with round icons)
+   ===================================================== */
+.popular-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+
+/* Heading with blue bar on the left */
+.pop-head { border-left: 4px solid var(--blue); padding-left: 0.9rem; }
+.pop-title { font-size: 1.5rem; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.2; }
+.pop-sub { color: #64748b; }
+.pop-viewall { color: var(--blue); font-size: 0.85rem; font-weight: 500; text-decoration: none; }
+.pop-viewall:hover { text-decoration: underline; }
+
+/* Card */
+.cat-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  height: 100%;
+  min-height: 92px;
+  padding: 1rem 1rem 1rem 1.1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f7ff 100%);
+  border: 1px solid #e3ebfa;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--dark);
+  box-shadow: 0 3px 12px rgba(37, 99, 235, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+  color: var(--dark);
+}
+
+/* Round gradient icon */
+.cat-circle {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.c-news { background: linear-gradient(135deg, #1d8bf5, #1d4ed8); }
+.c-pc   { background: linear-gradient(135deg, #6d5cf5, #4f46e5); }
+.c-ai   { background: linear-gradient(135deg, #a855f7, #6d28d9); }
+.c-tips { background: linear-gradient(135deg, #10b981, #059669); }
+.c-dev  { background: linear-gradient(135deg, #1d8bf5, #0b5fd0); }
+.c-prod { background: linear-gradient(135deg, #fb923c, #f97316); }
+
+/* Text */
+.cat-info { display: flex; flex-direction: column; min-width: 0; padding-bottom: 6px; }
+.cat-info strong { font-size: 0.95rem; font-weight: 600; line-height: 1.25; color: #0f172a; }
+.cat-info small { font-size: 0.78rem; color: #64748b; margin-top: 2px; }
+
+/* Small round chevron, bottom-right */
+.cat-go {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #dbe7ff;
+  color: #2563eb;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+}
+
 /* ===== Categories ===== */
+.category-section { padding-top: 70px; padding-bottom: 60px; }
+
 .category {
   display: block;
   height: 100%;
   background-color: rgba(226, 228, 231, 0.541);
-  padding: 1rem;
+  padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
   transition: box-shadow 0.2s;
 }
+.category-section .section-title { font-size: 2.2rem; font-weight: 300; }
 .category:hover { box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15); }
 .category strong { display: block; font-size: 0.9rem; }
 .category small { color: #64748b; }
@@ -140,16 +434,101 @@ a { color: inherit; }
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
 }
- 
+
+/* =====================================================
+   NEWSLETTER  (dark banner, same look as header and cards)
+   ===================================================== */
+.news-section { padding-top: 1rem; padding-bottom: 3rem; }
+
+.news-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 2.2rem;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #050c26, #0a1a4a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(10, 19, 48, 0.3);
+  color: #fff;
+}
+/* soft glow on the right */
+.news-card::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 75, 245, 0.35), transparent 70%);
+  pointer-events: none;
+}
+.news-card .row { position: relative; z-index: 1; }
+
+.news-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #fff;
+  background: linear-gradient(135deg, #5b4bf5, #2563eb);
+  box-shadow: 0 4px 14px rgba(59, 109, 240, 0.5);
+}
+.news-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.2rem; color: #fff; }
+.grad-text-light {
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.news-sub { color: #cbd5f5; }
+
+.news-form { display: flex; gap: 0.6rem; }
+.news-form .form-control {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #2f5bd8;
+  border-radius: 999px;
+  color: #fff;
+  padding: 0.75rem 1.4rem;
+}
+.news-form .form-control::placeholder { color: #cbd5f5; }
+.news-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #6d8cff;
+  box-shadow: 0 0 0 3px rgba(91, 75, 245, 0.3);
+  color: #fff;
+}
+.news-btn {
+  flex-shrink: 0;
+  padding: 0.75rem 1.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5b4bf5, #3b6df0);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.news-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(59, 109, 240, 0.45); }
+.news-note { display: block; margin-top: 0.6rem; padding-left: 1.4rem; color: #9fb0d0; }
+
+@media (max-width: 575px) {
+  .news-card { padding: 1.5rem 1.25rem; }
+  .news-form { flex-direction: column; }
+  .news-note { padding-left: 0; }
+}
+
 /* ===== Newsletter ===== */
 .newsletter { background: #e8f0ff; }
- 
+
 /* ===== Footer ===== */
-.footer { background: #0b1437; }
+.footer { background: #0b1437; padding-top: 100px; }
 .footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
 .footer a:hover { color: #fff; }
 .footer li { margin-bottom: 0.5rem; }
- 
+.footer-hr { padding-bottom: 27px; }
+
 /* ===== Back to top button ===== */
 .to-top {
   position: fixed;
@@ -164,17 +543,129 @@ a { color: inherit; }
   place-items: center;
   text-decoration: none;
 }
- 
+
+/* =====================================================
+   TIPS & TRICKS  (same dark cards as Latest Articles)
+   ===================================================== */
+.tips-section { padding-top: 2.5rem; padding-bottom: 4rem; }
+
+/* Filter pills */
+.tips-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 1.5rem; }
+.tips-pills a {
+  padding: 0.35rem 1.1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--dark);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.tips-pills a:hover { border-color: var(--blue); color: var(--blue); }
+.tips-pills a.active {
+  background: linear-gradient(90deg, #5b4bf5, #3b6df0);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* Featured (large) card */
+.tip-featured .article-thumb { height: 340px; }
+.tip-featured h3 { font-size: 1.5rem; }
+.tip-featured p { font-size: 0.95rem; }
+
+/* Card without an image: the pill sits inside the text area */
+.tip-text-only .article-body { padding-top: 1.2rem; }
+.article-badge.inline { position: static; align-self: flex-start; margin-bottom: 0.8rem; }
+
+/* "Tip of the day" box */
+.tip-stat {
+  background: linear-gradient(135deg, #5b4bf5, #2563eb);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+.tip-stat small {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.tip-stat small::after { content: ""; flex: 1; height: 1px; background: rgba(255, 255, 255, 0.6); }
+.tip-stat strong { display: block; font-size: 3rem; font-weight: 700; margin: 0.4rem 0; line-height: 1; }
+.tip-stat p { font-size: 0.88rem; margin: 0; color: #fff; }
+
+@media (max-width: 991px) {
+  .tip-featured .article-thumb { height: 240px; }
+}
+
+/* ===== Magazine layout (Tips & Tricks) ===== */
+.mag-section { margin-bottom: 4.9rem; }
+.mag-title { font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem; }
+
+/* Outlined pill buttons */
+.mag-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 1.8rem; }
+.mag-pills a {
+  border: 1px solid var(--dark);
+  border-radius: 30px;
+  padding: 2px 16px;
+  font-size: 0.9rem;
+  color: var(--dark);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.mag-pills a:hover,
+.mag-pills a.active { border-color: var(--blue); color: var(--blue); }
+
+/* Articles separated by thin lines */
+.mag-item { padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+.mag-item:last-child { margin-bottom: 0; border-bottom: 0; }
+
+.mag-img { width: 100%; height: 200px; object-fit: cover; display: block; margin-bottom: 1rem; border-radius: 4px; }
+.mag-img-lg { height: 420px; }
+
+.mag-item h3 { font-size: 1.3rem; font-weight: 400; }
+.mag-item h3 a { color: var(--dark); text-decoration: none; }
+.mag-item h3 a:hover { color: var(--blue); }
+.mag-featured h3 { font-size: 1.8rem; }
+
+.mag-item p { font-size: 0.85rem; color: #64748b; margin: 0; }
+.mag-time { font-size: 0.78rem; color: #94a3b8; margin-left: 4px; }
+
+/* Author line */
+.mag-author { display: flex; align-items: center; gap: 0.7rem; margin-top: 0.9rem; }
+.mag-author img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+.mag-author strong { display: block; font-size: 0.85rem; }
+.mag-author small { color: #94a3b8; }
+
+/* "Tip of the day" coloured box */
+.mag-stat { background: #4e83f7; color: #fff; padding: 1.5rem; margin-bottom: 1.25rem; border-radius: 4px; }
+.mag-stat small { display: flex; align-items: center; gap: 0.8rem; font-size: 0.72rem; letter-spacing: 0.5px; text-transform: uppercase; }
+.mag-stat small::after { content: ""; flex: 1; height: 1px; background: rgba(255, 255, 255, 0.6); }
+.mag-stat strong { display: block; font-size: 2.6rem; font-weight: 300; margin: 0.4rem 0; }
+.mag-stat p { font-size: 0.85rem; margin: 0; color: #fff; }
+
+/* Tablet and phone */
+@media (max-width: 991px) {
+  .mag-img-lg { height: 260px; }
+  .hero { min-height: 380px; padding: 1.5rem; }
+  .hero-text h1 { font-size: 1.7rem; }
+  .latest-title { font-size: 1.4rem; }
+  .article-thumb { height: 170px; }
+}
+
 /* =====================================================
    DARK MODE  (switched by the moon button in the header)
-   include.js sets data-bs-theme="dark" on <html>
+   theme.js sets data-bs-theme="dark" on <html>
    ===================================================== */
 [data-bs-theme="dark"] {
   --page-bg: #0b1120;
   --border: #243049;
   --dark: #e5e9f5;          /* "dark" text colour becomes light */
 }
- 
+
 /* White surfaces become dark blue */
 [data-bs-theme="dark"] .box,
 [data-bs-theme="dark"] .category,
@@ -187,7 +678,33 @@ a { color: inherit; }
   background: #131c31;
 }
 [data-bs-theme="dark"] .bg-white { background-color: #131c31 !important; }
- 
+
+/* Old-style trending rows on other pages */
+[data-bs-theme="dark"] .trend { background-color: #131c31; }
+
+/* Home Trending box keeps its own dark colours */
+[data-bs-theme="dark"] .trend-box { background: #0a1330; }
+[data-bs-theme="dark"] .trend-box .trend { background: rgba(255, 255, 255, 0.04); }
+
+/* Latest Articles: only the section background changes, the cards are already dark */
+[data-bs-theme="dark"] .latest-section { background: #0b1120; }
+[data-bs-theme="dark"] .latest-title { color: #e5e9f5; }
+[data-bs-theme="dark"] .article-card { border: 1px solid rgba(255, 255, 255, 0.08); }
+
+/* Popular Categories */
+[data-bs-theme="dark"] .pop-title,
+[data-bs-theme="dark"] .cat-info strong { color: #e5e9f5; }
+[data-bs-theme="dark"] .cat-card {
+  background: linear-gradient(135deg, #131c31 0%, #16213a 100%);
+  border-color: #243049;
+}
+[data-bs-theme="dark"] .cat-go { background: #1f2f57; color: #7aa2ff; }
+
+/* Tips & Tricks */
+[data-bs-theme="dark"] .tips-pills a { background: #131c31; border-color: #243049; }
+[data-bs-theme="dark"] .tips-pills a:hover { border-color: #7aa2ff; color: #7aa2ff; }
+[data-bs-theme="dark"] .tips-pills a.active { background: linear-gradient(90deg, #5b4bf5, #3b6df0); color: #fff; }
+
 /* Light-blue areas become deep blue */
 [data-bs-theme="dark"] .newsletter,
 [data-bs-theme="dark"] .subscribe,
@@ -198,24 +715,221 @@ a { color: inherit; }
   background: #1a2745;
 }
 [data-bs-theme="dark"] .prod-hero { background: linear-gradient(180deg, #14213d, var(--page-bg)); }
- 
+
+/* Header icons (older style) */
+[data-bs-theme="dark"] .header-icon { color: #94a3b8; }
+[data-bs-theme="dark"] .header-icon:hover { color: #7aa2ff; }
+
 /* Small fixes */
 [data-bs-theme="dark"] .navbar-toggler-icon { filter: invert(1); }
 [data-bs-theme="dark"] .t-item::before { border-color: var(--page-bg); }
- 
 
+/* =====================================================
+   EXTRA NEWS SECTIONS  (add at the bottom of style.css,
+   BEFORE the DARK MODE block)
+   ===================================================== */
 
+/* ----- Section heading used by More News, Watch Now, Top Reviews ----- */
+.mn-heading { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.2rem; }
+.mn-heading h2 { font-size: 1.8rem; font-weight: 300; margin: 0; padding-left: 0.9rem; border-left: 4px solid var(--blue); }
+.mn-heading h2 span { color: #3b82f6; font-weight: 600; }
+.mn-heading a { font-size: 0.85rem; color: var(--blue); text-decoration: none; }
 
+/* ----- 1) Breaking news ticker ----- */
+.ticker { display: flex; align-items: center; background: #0a1330; color: #fff; overflow: hidden; }
+.ticker-label {
+  flex-shrink: 0;
+  padding: 0.6rem 1.2rem;
+  background: #e11d48;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.ticker-track { overflow: hidden; flex: 1; }
+.ticker-move {
+  display: inline-flex;
+  gap: 1.5rem;
+  white-space: nowrap;
+  padding-left: 1.5rem;
+  animation: ticker 45s linear infinite;
+}
+.ticker-track:hover .ticker-move { animation-play-state: paused; }
+.ticker-move a { color: #e5e9f5; font-size: 0.85rem; text-decoration: none; }
+.ticker-move a:hover { color: #7aa2ff; }
+.ticker-move span { color: #3b82f6; }
+@keyframes ticker { to { transform: translateX(-50%); } }   /* headlines are written twice, so -50% loops perfectly */
 
+/* ----- 2) More News list ----- */
+.mn-item {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--dark);
+}
+.mn-item:first-child { padding-top: 0; }
+.mn-item img { width: 240px; height: 150px; flex-shrink: 0; object-fit: cover; border-radius: 8px; }
+.mn-item h3 { font-size: 1.15rem; font-weight: 600; margin: 0.4rem 0; }
+.mn-item:hover h3 { color: var(--blue); }
+.mn-item p { font-size: 0.88rem; color: #64748b; margin-bottom: 0.4rem; }
+.mn-item small { color: #94a3b8; font-size: 0.75rem; }
+.mn-tag { font-size: 0.72rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
 
+/* ----- Sidebar widgets ----- */
+.mn-widget { background: #fcfafa; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+.mn-widget-title { font-size: 1rem; font-weight: 700; padding-left: 0.6rem; border-left: 4px solid var(--blue); margin-bottom: 1rem; }
 
+.mr-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--dark);
+  text-decoration: none;
+}
+.mr-row:last-child { border-bottom: 0; }
+.mr-row span {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.mr-row:hover { color: var(--blue); }
 
+.mn-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.mn-tags a {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: #e8f0ff;
+  color: var(--blue);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.mn-tags a:hover { background: var(--blue); color: #fff; }
 
+.mn-follow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.mn-follow a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--dark);
+  text-decoration: none;
+}
+.mn-follow a:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
 
+/* ----- 3) Videos (dark band) ----- */
+.vid-section { background: #0a1330; padding: 3rem 1.5rem; color: #fff; }
+.vid-section .mn-heading a { color: #7aa2ff; }
 
+.vid-big { position: relative; display: block; height: 100%; min-height: 380px; border-radius: 12px; overflow: hidden; color: #fff; text-decoration: none; }
+.vid-big img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vid-big::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(5, 12, 35, 0.9), transparent 60%); }
+.vid-caption { position: absolute; left: 1.5rem; right: 1.5rem; bottom: 1.25rem; z-index: 1; }
+.vid-caption h3 { font-size: 1.4rem; font-weight: 600; margin: 0.4rem 0 0; }
 
+.vid-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.9);
+  font-size: 2rem;
+  transition: transform 0.2s;
+}
+.vid-big:hover .vid-play { transform: translate(-50%, -50%) scale(1.1); }
 
+.vid-time { display: inline-block; padding: 1px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.7); font-size: 0.75rem; }
 
+.vid-small { display: flex; gap: 0.9rem; align-items: center; color: #fff; text-decoration: none; }
+.vid-small-img { position: relative; width: 140px; height: 90px; flex-shrink: 0; border-radius: 8px; overflow: hidden; }
+.vid-small-img img { width: 100%; height: 100%; object-fit: cover; }
+.vid-small-img .vid-time { position: absolute; right: 6px; bottom: 6px; }
+.vid-small h4 { font-size: 0.95rem; font-weight: 600; margin: 0; }
+.vid-small:hover h4 { color: #7aa2ff; }
 
+/* ----- 4) Top reviews ----- */
+.rev-card { display: block; height: 100%; background: #fcfafa; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; color: var(--dark); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+.rev-card:hover { transform: translateY(-5px); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12); }
+.rev-img { position: relative; height: 180px; }
+.rev-img img { width: 100%; height: 100%; object-fit: cover; }
+.rev-score {
+  position: absolute;
+  right: 12px;
+  bottom: -18px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #16a34a;
+  border: 3px solid #fff;
+  color: #fff;
+  font-weight: 700;
+}
+.rev-body { padding: 1.5rem 1.1rem 1.1rem; }
+.rev-stars { color: #f59e0b; font-size: 0.85rem; }
+.rev-body h3 { font-size: 1rem; font-weight: 600; margin: 0.4rem 0; }
+.rev-body p { font-size: 0.85rem; color: #64748b; margin: 0; }
 
+/* ----- Phones ----- */
+@media (max-width: 767px) {
+  .mn-item { flex-direction: column; }
+  .mn-item img { width: 100%; height: 200px; }
+  .vid-big { min-height: 260px; }
+}
 
+/* ----- Dark mode for the new sections (add inside your DARK MODE part) ----- */
+[data-bs-theme="dark"] .mn-widget,
+[data-bs-theme="dark"] .rev-card { background: #131c31; }
+[data-bs-theme="dark"] .mn-tags a { background: #1a2745; }
+[data-bs-theme="dark"] .rev-score { border-color: #131c31; }
+
+/* ===== Text cards under the hero ===== */
+.note-card {
+  --accent: var(--blue);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.25rem 1.4rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  color: var(--dark);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.note-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12); }
+.note-card .cat-pill { align-self: flex-start; }
+.note-card h3 { font-size: 1.05rem; font-weight: 600; margin: 0.7rem 0 0.4rem; }
+.note-card p { font-size: 0.85rem; color: #64748b; margin-bottom: 0.8rem; }
+.note-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+.note-meta .bi-arrow-right { color: var(--accent); font-size: 1.1rem; }
+
+[data-bs-theme="dark"] .note-card { background: #131c31; }

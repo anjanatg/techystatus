@@ -1,2 +1,12 @@
-/* ===== iOS page only: banner colour ===== */
+/* ===== iOS page only =====
+   Card, sidebar and pagination styles come from style.css, index.css and subcategory.css */
+
+/* ----- Slate banner colour ----- */
 .ios-banner { background: linear-gradient(135deg, #475569, #0f172a); }
+
+/* ----- Article images (the <img> fills the box) ----- */
+.card-item .thumb { height: 190px; overflow: hidden; }
+
+/* ----- Small phone pictures in the sidebar ----- */
+.sidebar .trend { align-items: center; }
+.sidebar .trend-img { width: 88px; height: 64px; }

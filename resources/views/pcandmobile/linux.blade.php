@@ -3,20 +3,20 @@
 @section('title', "Linux - TechNova")
 
 @push('styles')
-  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/pcandmobile/index.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/pcandmobile/subcategory.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/css/pcandmobile/linux.css') }}" rel="stylesheet">
 @endpush
 
 @section('content')
+
 <!-- ========== BANNER + BREADCRUMB ========== -->
 <section class="container-fluid cat-banner sub-banner linux-banner">
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-3">
-        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html">PC &amp; Mobile</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('pcandmobile.index') }}">PC &amp; Mobile</a></li>
         <li class="breadcrumb-item active" aria-current="page">Linux</li>
       </ol>
     </nav>
@@ -43,56 +43,56 @@
       <div class="row g-4">
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-code"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-alicia-christin-gerald-1447380217-37880101.jpg') }}" alt="Linux distros" loading="lazy"></div>
             <span class="tag">Guide</span>
-            <h3>Best Linux Distros for Beginners in 2025</h3>
+            <h3>Best Linux Distros for Beginners This Year</h3>
             <p>Easy to install and easy to use. Our picks for anyone switching from Windows.</p>
-            <div class="foot"><span>Sep 23, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>2 hours ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-robot"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-cottonbro-6804613.jpg') }}" alt="Terminal commands" loading="lazy"></div>
             <span class="tag">Terminal</span>
             <h3>15 Linux Commands Every Beginner Should Know</h3>
             <p>Learn the basic commands you will use every day.</p>
-            <div class="foot"><span>Sep 21, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>Yesterday</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-ai"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-altman-12883029.jpg') }}" alt="Dual boot" loading="lazy"></div>
             <span class="tag">Tutorial</span>
             <h3>How to Dual Boot Linux and Windows Safely</h3>
             <p>Step-by-step setup without losing your files.</p>
-            <div class="foot"><span>Sep 19, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>2 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-brain"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-andrew-15863044.jpg') }}" alt="Ubuntu release" loading="lazy"></div>
             <span class="tag">News</span>
             <h3>Ubuntu 25.10 Released: What Is New</h3>
             <p>A quick look at the main changes and improvements.</p>
-            <div class="foot"><span>Sep 17, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>3 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-tips"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-magda-ehlers-pexels-35280155.jpg') }}" alt="Old laptop" loading="lazy"></div>
             <span class="tag">Tips</span>
             <h3>10 Ways to Make Linux Faster on an Old Laptop</h3>
             <p>Light desktops and simple tweaks that make a big difference.</p>
-            <div class="foot"><span>Sep 15, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>4 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
         <div class="col-md-6">
           <article class="box card-item h-100">
-            <div class="thumb bg-js"></div>
+            <div class="thumb"><img src="{{ asset('assets/images/pexels-kadiremir-31148083.jpg') }}" alt="Linux apps" loading="lazy"></div>
             <span class="tag">Apps</span>
             <h3>Best Free Linux Apps to Replace Windows Software</h3>
             <p>Open-source tools for office work, editing and more.</p>
-            <div class="foot"><span>Sep 13, 2025</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
+            <div class="foot"><span>5 days ago</span><a href="#">Read more <i class="bi bi-arrow-right"></i></a></div>
           </article>
         </div>
       </div>
@@ -119,14 +119,17 @@
           <h3 class="widget-title">Top Linux Distros</h3>
           <div class="trend d-flex gap-3">
             <span class="num">1</span>
+            <div class="trend-img"><img src="{{ asset('assets/images/pexels-alicia-christin-gerald-1447380217-37880101.jpg') }}" alt="Ubuntu" loading="lazy"></div>
             <div><h4>Ubuntu</h4><small class="text-muted">Best for beginners</small></div>
           </div>
           <div class="trend d-flex gap-3">
             <span class="num">2</span>
+            <div class="trend-img"><img src="{{ asset('assets/images/pexels-cottonbro-6804613.jpg') }}" alt="Linux Mint" loading="lazy"></div>
             <div><h4>Linux Mint</h4><small class="text-muted">Best for Windows users</small></div>
           </div>
           <div class="trend d-flex gap-3 border-0 pb-0 mb-0">
             <span class="num">3</span>
+            <div class="trend-img"><img src="{{ asset('assets/images/pexels-altman-12883029.jpg') }}" alt="Fedora" loading="lazy"></div>
             <div><h4>Fedora</h4><small class="text-muted">Best for developers</small></div>
           </div>
         </div>
@@ -134,8 +137,9 @@
         <div class="box subscribe">
           <h3 class="widget-title">Linux Updates</h3>
           <p class="small text-muted">Get new Linux articles in your inbox.</p>
-          <form>
-            <input type="email" class="form-control mb-2" placeholder="Enter your email address">
+          <form action="" method="POST">
+            @csrf
+            <input type="email" name="email" class="form-control mb-2" placeholder="Enter your email address" required>
             <button type="submit" class="btn btn-primary w-100">Subscribe</button>
           </form>
         </div>
@@ -143,4 +147,5 @@
     </aside>
   </div>
 </main>
+
 @endsection

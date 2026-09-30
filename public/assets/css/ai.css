@@ -1,0 +1,129 @@
+/* ===== Artificial Intelligence page only =====
+   Shared styles (header, navbar, footer, .box, .thumb, gradients) live in style.css */
+
+/* ----- Dark hero with glow ----- */
+.ai-hero {
+  position: relative;
+  overflow: hidden;
+  background: #070d24;
+  color: #fff;
+  padding: 4rem 0;
+}
+/* soft blue and purple glow behind the text */
+.ai-hero::before {
+  content: "";
+  position: absolute;
+  inset: -40% -10% auto auto;
+  width: 60%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.45), transparent 60%);
+}
+.ai-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -50% -10%;
+  width: 55%;
+  height: 130%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.4), transparent 60%);
+}
+.ai-hero .container { position: relative; z-index: 1; }   /* keep text above the glow */
+.ai-hero h1 { font-size: 2.8rem; font-weight: 700; }
+.ai-hero p { color: #b8c4e0; max-width: 480px; }
+.gradient-text {
+  background: linear-gradient(90deg, #7aa2ff, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+}
+.glass h2 { font-size: 1.2rem; font-weight: 600; }
+.stat strong { display: block; font-size: 1.6rem; }
+.stat small { color: #b8c4e0; }
+
+/* ----- Tabs ----- */
+.ai-tabs .nav-link {
+  color: var(--dark);
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 0.45rem 1.2rem;
+  font-size: 0.9rem;
+}
+.ai-tabs .nav-link.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* ----- Article cards with a coloured top edge ----- */
+.ai-card { border-top: 4px solid var(--blue); height: 100%; }
+.ai-card .tag { font-size: 0.72rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
+.ai-card h3 { font-size: 1.05rem; font-weight: 600; margin: 0.4rem 0; }
+.ai-card h3 a { color: var(--dark); text-decoration: none; }
+.ai-card h3 a:hover { color: var(--blue); }
+.ai-card p { font-size: 0.85rem; color: #64748b; }
+.ai-card small { color: #64748b; }
+
+/* ----- Timeline (line in the middle on desktop) ----- */
+.timeline { position: relative; padding: 0.5rem 0; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.t-item { position: relative; width: 50%; padding: 0 2.5rem 2rem 0; }
+.t-item:nth-child(even) { margin-left: 50%; padding: 0 0 2rem 2.5rem; }
+.t-item::before {                       /* the dot on the line */
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 1.2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--blue);
+}
+.t-item:nth-child(even)::before { right: auto; left: -7px; }
+.t-year { font-weight: 700; color: var(--blue); }
+.t-item h3 { font-size: 1rem; font-weight: 600; margin: 2px 0 4px; }
+.t-item p { font-size: 0.85rem; color: #64748b; margin: 0; }
+
+/* ----- Prompt cards ----- */
+.prompt {
+  background: #0f172a;
+  color: #cbd5e1;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: Consolas, monospace;
+  font-size: 0.82rem;
+  margin: 0.8rem 0 0;
+}
+
+/* ----- Small screens: timeline on the left ----- */
+@media (max-width: 767px) {
+  .ai-hero h1 { font-size: 2rem; }
+  .timeline::before { left: 7px; }
+  .t-item, .t-item:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 1.5rem 2rem; }
+  .t-item::before, .t-item:nth-child(even)::before { left: 0; right: auto; }
+}
+
+/* ----- Round icon (prompt cards) ----- */
+.icon-round {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #e8f0ff;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}

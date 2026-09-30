@@ -1,5 +1,5 @@
 /* ===== Shared by Android, iOS, Linux and Windows pages =====
-   Card, banner and grid styles come from style.css and pc-mobile.css */
+   Card, banner and grid styles come from style.css and index.css */
 
 /* ----- Banner extras ----- */
 .sub-banner { padding: 2rem 0 2.5rem; }
@@ -19,7 +19,9 @@
   margin-bottom: 1rem;
 }
 
+.sidebar .trend { align-items: center; }
 .sidebar .trend h4 { font-size: 0.9rem; font-weight: 600; margin: 0 0 2px; }
+.sidebar .trend-img { width: 88px; height: 64px; }     /* small pictures in the "Top ..." list */
 .subscribe { background: #e8f0ff; }
 
 /* Topic chips */
@@ -37,4 +39,4 @@
 /* Pagination (same look as the News page) */
 .pagination { gap: 6px; }
 .page-link { color: var(--dark); border: 1px solid var(--border); border-radius: 8px !important; }
-.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: rgb(5, 97, 5); }
+.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: #fff; }

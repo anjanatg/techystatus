@@ -1,5 +1,5 @@
 /* ===== Android page only =====
-   Card, banner and grid styles come from style.css and pc-mobile.css */
+   Card, banner and grid styles come from style.css, index.css and subcategory.css */
 
 /* ----- Green Android banner (overrides the blue one) ----- */
 .android-banner { background: linear-gradient(135deg, #0f9d58, #0b3d2e); padding: 2rem 0 2.5rem; }
@@ -7,6 +7,9 @@
 .android-banner .breadcrumb a { color: #fff; text-decoration: none; }
 .android-banner .breadcrumb-item.active { color: #bfe8d0; }
 .banner-icon { font-size: 3rem; }
+
+/* ----- Article images (the <img> fills the box) ----- */
+.card-item .thumb { height: 190px; overflow: hidden; }
 
 /* ----- Sidebar ----- */
 .sidebar { position: sticky; top: 20px; }
@@ -19,7 +22,9 @@
   margin-bottom: 1rem;
 }
 
+.sidebar .trend { align-items: center; }
 .sidebar .trend h4 { font-size: 0.9rem; font-weight: 600; margin: 0 0 2px; }
+.sidebar .trend-img { width: 88px; height: 64px; }     /* small phone pictures */
 .subscribe { background: #e8f0ff; }
 
 /* Topic chips */
@@ -37,4 +42,4 @@
 /* Pagination (same look as the News page) */
 .pagination { gap: 6px; }
 .page-link { color: var(--dark); border: 1px solid var(--border); border-radius: 8px !important; }
-.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: rgb(19, 126, 19); }
+.page-item.active .page-link { background: var(--blue); border-color: var(--blue); color: #fff; }

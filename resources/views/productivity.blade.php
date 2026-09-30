@@ -14,8 +14,8 @@
     <span class="badge bg-primary mb-3">PRODUCTIVITY</span>
     <h1>Work Smarter, Not Harder</h1>
     <p>Simple tools, habits and shortcuts that help you get more done every day.</p>
-    <form class="prod-search">
-      <input type="text" class="form-control" placeholder="Search productivity tips...">
+    <form class="prod-search" action="#" method="GET">
+      <input type="text" name="q" class="form-control" placeholder="Search productivity tips...">
       <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
     </form>
   </div>
@@ -42,12 +42,12 @@
 <!-- ========== FEATURED (image left, text right) ========== -->
 <section class="container pb-4">
   <article class="box spotlight row g-0 mx-0">
-    <div class="col-md-5"><div class="thumb bg-tips"></div></div>
+    <div class="col-md-5"><div class="thumb"><img src="{{ asset('assets/images/pexels-mikhail-nilov-6930895.jpg') }}" alt="Productivity tips" loading="lazy"></div></div>
     <div class="col-md-7 body">
       <span class="badge bg-primary mb-3">EDITOR'S PICK</span>
       <h2>10 Productivity Tips to Get More Done Every Day</h2>
       <p>Simple and effective habits to plan your day, avoid distractions and make the most of your time. No complicated systems needed.</p>
-      <div class="small text-muted mb-3"><i class="bi bi-clock"></i> 6 min read &nbsp;•&nbsp; Sep 22, 2025</div>
+      <div class="small text-muted mb-3"><i class="bi bi-clock"></i> 6 min read &nbsp;•&nbsp; Today</div>
       <a href="#" class="btn btn-primary px-4">Read Article <i class="bi bi-arrow-right"></i></a>
     </div>
   </article>
@@ -103,10 +103,10 @@
 <section class="container py-4 mb-3">
   <h2 class="h5 fw-bold section-title mb-3">Latest Productivity Articles</h2>
   <div class="row g-4">
-    <div class="col-lg-6"><div class="box mini"><div class="thumb bg-ai"></div><div><h3><a href="#">Best Free Productivity Apps for Windows and Android</a></h3><small>Sep 21, 2025</small></div></div></div>
-    <div class="col-lg-6"><div class="box mini"><div class="thumb bg-code"></div><div><h3><a href="#">How to Build a Daily Routine That Sticks</a></h3><small>Sep 19, 2025</small></div></div></div>
-    <div class="col-lg-6"><div class="box mini"><div class="thumb bg-brain"></div><div><h3><a href="#">Using AI Tools to Save Time on Everyday Tasks</a></h3><small>Sep 17, 2025</small></div></div></div>
-    <div class="col-lg-6"><div class="box mini"><div class="thumb bg-windows"></div><div><h3><a href="#">Set Up a Distraction-Free Desktop in 5 Steps</a></h3><small>Sep 15, 2025</small></div></div></div>
+    <div class="col-lg-6"><div class="box mini"><div class="thumb"><img src="{{ asset('assets/images/pexels-stanley-ng-2850879-4387779.jpg') }}" alt="Productivity apps" loading="lazy"></div><div><h3><a href="#">Best Free Productivity Apps for Windows and Android</a></h3><small>Yesterday</small></div></div></div>
+    <div class="col-lg-6"><div class="box mini"><div class="thumb"><img src="{{ asset('assets/images/pexels-cottonbro-6804613.jpg') }}" alt="Daily routine" loading="lazy"></div><div><h3><a href="#">How to Build a Daily Routine That Sticks</a></h3><small>2 days ago</small></div></div></div>
+    <div class="col-lg-6"><div class="box mini"><div class="thumb"><img src="{{ asset('assets/images/pexels-andrew-15863044.jpg') }}" alt="AI tools" loading="lazy"></div><div><h3><a href="#">Using AI Tools to Save Time on Everyday Tasks</a></h3><small>3 days ago</small></div></div></div>
+    <div class="col-lg-6"><div class="box mini"><div class="thumb"><img src="{{ asset('assets/images/pexels-altman-12883029.jpg') }}" alt="Clean desktop" loading="lazy"></div><div><h3><a href="#">Set Up a Distraction-Free Desktop in 5 Steps</a></h3><small>4 days ago</small></div></div></div>
   </div>
   <div class="text-center mt-4"><a href="#" class="btn btn-primary px-5">View All Articles</a></div>
 </section>
