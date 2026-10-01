@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "News &amp; Updates - TechNova")
+@section('title', "News &amp; Updates - TechyStatus")
 
 @push('styles')
   <link href="{{ asset('assets/css/news.css') }}" rel="stylesheet">
@@ -36,7 +36,7 @@
             <span class="badge bg-primary mb-2">News &amp; Updates</span>
             <h2><a href="#">Apple Launches iPhone 17 with Improved Camera and Battery Life</a></h2>
             <div class="meta">
-              <span><i class="bi bi-person-fill"></i> TechNova Team</span>
+              <span><i class="bi bi-person-fill"></i> TechyStatus Team</span>
               <span><i class="bi bi-clock"></i> 2 hours ago</span>
               <span><i class="bi bi-chat"></i> 0</span>
             </div>
@@ -52,7 +52,7 @@
             <span class="badge bg-primary mb-2">Artificial Intelligence</span>
             <h2><a href="#">OpenAI Unveils GPT-5 with Smarter and More Helpful AI</a></h2>
             <div class="meta">
-              <span><i class="bi bi-person-fill"></i> TechNova Team</span>
+              <span><i class="bi bi-person-fill"></i> TechyStatus Team</span>
               <span><i class="bi bi-clock"></i> 5 hours ago</span>
               <span><i class="bi bi-chat"></i> 0</span>
             </div>
@@ -68,7 +68,7 @@
             <span class="badge bg-primary mb-2">PC &amp; Mobile</span>
             <h2><a href="#">New Android Update Brings Faster Performance and Better Privacy</a></h2>
             <div class="meta">
-              <span><i class="bi bi-person-fill"></i> TechNova Team</span>
+              <span><i class="bi bi-person-fill"></i> TechyStatus Team</span>
               <span><i class="bi bi-clock"></i> 8 hours ago</span>
               <span><i class="bi bi-chat"></i> 0</span>
             </div>
@@ -84,7 +84,7 @@
             <span class="badge bg-primary mb-2">News &amp; Updates</span>
             <h2><a href="#">Windows Gets a Major Update With New Productivity Features</a></h2>
             <div class="meta">
-              <span><i class="bi bi-person-fill"></i> TechNova Team</span>
+              <span><i class="bi bi-person-fill"></i> TechyStatus Team</span>
               <span><i class="bi bi-clock"></i> Yesterday</span>
               <span><i class="bi bi-chat"></i> 0</span>
             </div>
@@ -100,7 +100,7 @@
             <span class="badge bg-primary mb-2">Development</span>
             <h2><a href="#">Laravel 11 Released: Everything New for Developers</a></h2>
             <div class="meta">
-              <span><i class="bi bi-person-fill"></i> TechNova Team</span>
+              <span><i class="bi bi-person-fill"></i> TechyStatus Team</span>
               <span><i class="bi bi-clock"></i> Yesterday</span>
               <span><i class="bi bi-chat"></i> 0</span>
             </div>
@@ -116,7 +116,7 @@
             <span class="badge bg-primary mb-2">Artificial Intelligence</span>
             <h2><a href="#">AI Chips: Why Demand Is Growing Faster Than Ever</a></h2>
             <div class="meta">
-              <span><i class="bi bi-person-fill"></i> TechNova Team</span>
+              <span><i class="bi bi-person-fill"></i> TechyStatus Team</span>
               <span><i class="bi bi-clock"></i> 2 days ago</span>
               <span><i class="bi bi-chat"></i> 0</span>
             </div>

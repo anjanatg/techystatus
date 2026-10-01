@@ -1,7 +1,3 @@
-/* ===== Shared by Android, iOS, Linux and Windows pages =====
-   Card, banner and grid styles come from style.css and index.css */
-
-/* ----- Banner extras ----- */
 .sub-banner { padding: 2rem 0 2.5rem; }
 .sub-banner .breadcrumb { font-size: 0.85rem; --bs-breadcrumb-divider-color: rgba(255,255,255,.6); }
 .sub-banner .breadcrumb a { color: #fff; text-decoration: none; }

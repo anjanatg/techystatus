@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Productivity - TechNova")
+@section('title', "Productivity - TechyStatus")
 
 @push('styles')
   <link href="{{ asset('assets/css/productivity.css') }}" rel="stylesheet">

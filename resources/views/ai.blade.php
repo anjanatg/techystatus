@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Artificial Intelligence - TechNova")
+@section('title', "Artificial Intelligence - TechyStatus")
 
 @push('styles')
   <link href="{{ asset('assets/css/ai.css') }}" rel="stylesheet">
