@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@yield('title', 'TechNova - Tech News, Guides & Reviews')</title>
+  <title>@yield('title', 'TechyStatus - Tech News, Guides & Reviews')</title>
 
   {{-- Apply the saved light/dark theme before the page is drawn --}}
   <script>document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("theme") || "light");</script>

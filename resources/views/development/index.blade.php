@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Development - TechNova")
+@section('title', "Development - TechyStatus")
 
 @push('styles')
   <link href="{{ asset('assets/css/pcandmobile/index.css') }}" rel="stylesheet">

@@ -32,13 +32,13 @@
 
         <div class="col-6 col-lg-3">
           <h3 class="h6 fw-bold mb-3">About Us</h3>
-          <p class="small text-white-50">TechNova is your go-to source for the latest technology news, in-depth guides, and expert insights to help you stay ahead in the digital world.</p>
+          <p class="small text-white-50">TechyStatus is your go-to source for the latest technology news, in-depth guides, and expert insights to help you stay ahead in the digital world.</p>
         </div>
 
         <div class="col-lg-3">
           <h3 class="h6 fw-bold mb-3">Contact</h3>
           <ul class="list-unstyled small">
-            <li><i class="bi bi-envelope me-2"></i> support@technova.com</li>
+            <li><i class="bi bi-envelope me-2"></i> support@TechyStatus.com</li>
             <li><i class="bi bi-telephone me-2"></i> +91 98765 43210</li>
             <li><i class="bi bi-geo-alt me-2"></i> Kerala, India</li>
           </ul>
@@ -48,7 +48,7 @@
       <hr class="footer-hr border-secondary my-4">
 
       <div class="d-flex flex-column flex-md-row justify-content-between small text-white-50">
-        <span>© 2025 TechNova. All rights reserved.</span>
+        <span>© 2025 TechyStatus. All rights reserved.</span>
         <span><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Sitemap</a></span>
       </div>
     </div>

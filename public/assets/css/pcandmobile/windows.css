@@ -1,7 +1,3 @@
-/* ===== Windows page only =====
-   Card, sidebar and pagination styles come from style.css, index.css and subcategory.css */
-
-/* ----- Banner colour ----- */
 .windows-banner { background: linear-gradient(135deg, #0078d4, #002a52); }
 
 /* ----- Article images (the <img> fills the box) ----- */

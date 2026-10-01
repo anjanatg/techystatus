@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "TechNova - Tech News, Guides & Reviews")
+@section('title', "TechyStatus - Tech News, Guides & Reviews")
 
 @section('content')
 
@@ -18,7 +18,7 @@
       <h1 class="fw-bold">Best Laptops for <span class="hl">Developers</span> in 2025 (Performance, Battery Life &amp; Price)</h1>
       <p>Find the perfect laptop for coding, development and multitasking. Here are the top picks for 2025 with best performance, battery life and value for money.</p>
       <div class="small d-flex gap-4">
-        <span><i class="bi bi-person-circle me-1"></i> By <a href="#" class="hl">TechNova Team</a></span>
+        <span><i class="bi bi-person-circle me-1"></i> By <a href="#" class="hl">TechyStatus Team</a></span>
         <span><i class="bi bi-calendar3 me-1"></i> Sep 28, 2025</span>
       </div>
     </div>
@@ -32,8 +32,9 @@
         <span class="cat-pill cat-tips">Productivity</span>
         <h3>10 Productivity Tips to Get More Done Every Day</h3>
         <p>Small habits that help you plan your day, avoid distractions and finish more work in less time. Start with the two-minute rule and a simple daily plan.</p>
+        <p>Next, write a simple daily plan with only three main tasks. Turn off notifications during focus time, work in 25-minute blocks with short breaks, and keep your phone out of reach. Tools like a basic to-do app or a calendar are enough. You don't need anything complicated.</p>
         <div class="note-meta">
-          <span><i class="bi bi-person-fill"></i> TechNova Team &nbsp;•&nbsp; <i class="bi bi-clock"></i> 2 hours ago</span>
+          <span><i class="bi bi-person-fill"></i> TechyStatus Team &nbsp;•&nbsp; <i class="bi bi-clock"></i> 2 hours ago</span>
           <i class="bi bi-arrow-right"></i>
         </div>
       </a>
@@ -44,8 +45,9 @@
         <span class="cat-pill cat-prog">PC &amp; Mobile</span>
         <h3>Best Android Apps You Should Install This Year</h3>
         <p>From note-taking to file sharing, these free apps make your phone more useful. We picked apps that are light on battery and easy to use.</p>
+        <p>Our list covers a clean notes app that syncs across devices, a file-sharing tool that works without a cable, a password manager, and a simple offline PDF reader. Each one is free, has no heavy ads, and works well even on mid-range phones.</p>
         <div class="note-meta">
-          <span><i class="bi bi-person-fill"></i> TechNova Team &nbsp;•&nbsp; <i class="bi bi-clock"></i> 5 hours ago</span>
+          <span><i class="bi bi-person-fill"></i> TechyStatus Team &nbsp;•&nbsp; <i class="bi bi-clock"></i> 5 hours ago</span>
           <i class="bi bi-arrow-right"></i>
         </div>
       </a>
@@ -141,7 +143,7 @@
           <p>Apple has officially unveiled the iPhone 17 series, with significant upgrades in camera, battery life and performance.</p>
           <div class="article-meta">
             <img src="{{ asset('assets/images/pexels-yankrukov-7693685.jpg') }}" alt="" class="avatar">
-            <span>By TechNova Team</span>
+            <span>By TechyStatus Team</span>
             <span class="ms-2"><i class="bi bi-calendar3"></i> Sep 27, 2025</span>
             <i class="bi bi-arrow-right article-arrow"></i>
           </div>
@@ -161,7 +163,7 @@
           <p>Discover the must-have Android apps in 2025 to boost productivity, creativity and entertainment.</p>
           <div class="article-meta">
             <img src="{{ asset('assets/images/pexels-yankrukov-7693685.jpg') }}" alt="" class="avatar">
-            <span>By TechNova Team</span>
+            <span>By TechyStatus Team</span>
             <span class="ms-2"><i class="bi bi-calendar3"></i> Sep 26, 2025</span>
             <i class="bi bi-arrow-right article-arrow"></i>
           </div>
@@ -181,7 +183,7 @@
           <p>From smarter assistants to autonomous systems, explore how AI will shape our world in the coming years.</p>
           <div class="article-meta">
             <img src="{{ asset('assets/images/pexels-yankrukov-7693685.jpg') }}" alt="" class="avatar">
-            <span>By TechNova Team</span>
+            <span>By TechyStatus Team</span>
             <span class="ms-2"><i class="bi bi-calendar3"></i> Sep 24, 2025</span>
             <i class="bi bi-arrow-right article-arrow"></i>
           </div>
@@ -201,7 +203,7 @@
           <p>Simple and effective tips to boost your productivity and make the most of your time.</p>
           <div class="article-meta">
             <img src="{{ asset('assets/images/pexels-yankrukov-7693685.jpg') }}" alt="" class="avatar">
-            <span>By TechNova Team</span>
+            <span>By TechyStatus Team</span>
             <span class="ms-2"><i class="bi bi-calendar3"></i> Sep 22, 2025</span>
             <i class="bi bi-arrow-right article-arrow"></i>
           </div>
@@ -221,7 +223,7 @@
           <p>Step-by-step guide to create a modern web application using Laravel 11, Tailwind CSS and more.</p>
           <div class="article-meta">
             <img src="{{ asset('assets/images/pexels-yankrukov-7693685.jpg') }}" alt="" class="avatar">
-            <span>By TechNova Team</span>
+            <span>By TechyStatus Team</span>
             <span class="ms-2"><i class="bi bi-calendar3"></i> Sep 21, 2025</span>
             <i class="bi bi-arrow-right article-arrow"></i>
           </div>
@@ -241,7 +243,7 @@
           <p>Learn the basics of Python with simple examples and easy-to-follow steps.</p>
           <div class="article-meta">
             <img src="{{ asset('assets/images/pexels-yankrukov-7693685.jpg') }}" alt="" class="avatar">
-            <span>By TechNova Team</span>
+            <span>By TechyStatus Team</span>
             <span class="ms-2"><i class="bi bi-calendar3"></i> Sep 20, 2025</span>
             <i class="bi bi-arrow-right article-arrow"></i>
           </div>
@@ -353,7 +355,7 @@
       <article class="mag-item">
         <img class="mag-img" src="{{ asset('assets/images/pexels-stanley-ng-2850879-4387779.jpg') }}" alt="Phone battery" loading="lazy">
         <h3><a href="#">Save Your Phone Battery</a></h3>
-        <p class="text-dark">Five small settings that add hours to your Android battery life without slowing the phone down.
+        <p class="text-body">Five small settings that add hours to your Android battery life without slowing the phone down.
           <span class="mag-time">16h ago</span></p>
       </article>
 
@@ -374,7 +376,7 @@
       <article class="mag-item mag-featured">
         <img class="mag-img mag-img-lg" src="{{ asset('assets/images/pexels-altman-12883029.jpg') }}" alt="Windows features" loading="lazy">
         <h3><a href="#">10 Hidden Windows Features You Should Be Using</a></h3>
-        <p class="text-dark">Windows has many useful tools that most people never find, from clipboard history to virtual desktops.
+        <p class="text-body">Windows has many useful tools that most people never find, from clipboard history to virtual desktops.
           This guide shows the ten best ones and how to switch each of them on in under a minute.
           <span class="mag-time">5h ago</span></p>
       </article>
@@ -426,7 +428,7 @@
           <span class="mn-tag">Security</span>
           <h3>Why Every Small Business Should Turn On Two-Step Login Today</h3>
           <p>Experts say most account break-ins can be stopped with one simple setting. Here is how to switch it on.</p>
-          <small><i class="bi bi-clock"></i> 2 hours ago &nbsp;•&nbsp; By TechNova Team</small>
+          <small><i class="bi bi-clock"></i> 2 hours ago &nbsp;•&nbsp; By TechyStatus Team</small>
         </div>
       </a>
  
@@ -436,7 +438,7 @@
           <span class="mn-tag">Artificial Intelligence</span>
           <h3>AI Assistants Are Moving Into Everyday Apps: What It Means for You</h3>
           <p>From email to spreadsheets, AI features are appearing everywhere. We explain what is useful and what is hype.</p>
-          <small><i class="bi bi-clock"></i> 5 hours ago &nbsp;•&nbsp; By TechNova Team</small>
+          <small><i class="bi bi-clock"></i> 5 hours ago &nbsp;•&nbsp; By TechyStatus Team</small>
         </div>
       </a>
  
@@ -446,7 +448,7 @@
           <span class="mn-tag">PC &amp; Mobile</span>
           <h3>Foldable Phones Get Cheaper: Are They Ready for Everyone?</h3>
           <p>Prices are dropping and hinges are getting stronger. We look at who should buy one now and who should wait.</p>
-          <small><i class="bi bi-clock"></i> 8 hours ago &nbsp;•&nbsp; By TechNova Team</small>
+          <small><i class="bi bi-clock"></i> 8 hours ago &nbsp;•&nbsp; By TechyStatus Team</small>
         </div>
       </a>
  
@@ -456,7 +458,7 @@
           <span class="mn-tag">Development</span>
           <h3>Monolith or Microservices? How Teams Decide in Real Projects</h3>
           <p>Developers share the questions they ask before splitting an app into services.</p>
-          <small><i class="bi bi-clock"></i> Yesterday &nbsp;•&nbsp; By TechNova Team</small>
+          <small><i class="bi bi-clock"></i> Yesterday &nbsp;•&nbsp; By TechyStatus Team</small>
         </div>
       </a>
  
@@ -466,7 +468,7 @@
           <span class="mn-tag">Tips &amp; Tricks</span>
           <h3>Wi-Fi 7 Explained: Do You Need a New Router?</h3>
           <p>A plain-language guide to the new standard, what speeds to expect and when an upgrade makes sense.</p>
-          <small><i class="bi bi-clock"></i> Yesterday &nbsp;•&nbsp; By TechNova Team</small>
+          <small><i class="bi bi-clock"></i> Yesterday &nbsp;•&nbsp; By TechyStatus Team</small>
         </div>
       </a>
  
